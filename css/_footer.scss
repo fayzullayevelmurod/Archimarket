@@ -1,0 +1,35 @@
+footer {
+    background-color: $purple;
+    padding: 25px 0 16px 0;
+
+    .footer_top {
+        margin-bottom: 47px;
+    }
+
+    .footer_link {
+        gap: 37px;
+
+        a {
+            color: $white;
+            font-family: $ALS;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        color: $white;
+        font-family: $ALS;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        a {
+            color: $white;
+            text-decoration-line: underline;
+        }
+    }
+}

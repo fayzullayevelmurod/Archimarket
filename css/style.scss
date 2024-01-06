@@ -1,0 +1,115 @@
+// mixin
+@mixin flex-full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-full-stretch {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    align-items: start;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin transition {
+    transition: .2s ease;
+}
+// mixin
+
+// fonts
+$ALS: 'ALS Hauss', sans-serif;
+$Inter: 'Inter', sans-serif;
+// fonts
+
+// colors
+$white: #fff;
+$red: #EA323E;
+$purple: #2E2C41;
+$black: #191919;
+$text: #9298B0;
+// colors
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+span, label {
+    display: inline-block;
+}
+
+body {
+    font-style: normal;
+}
+
+input {
+    outline: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+address {
+    font-style: normal;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1247px;
+    padding: 0 20px;
+}
+
+
+
+
+@import 'header';
+@import 'footer';
+@import 'responsive';
