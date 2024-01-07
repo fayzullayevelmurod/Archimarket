@@ -37,6 +37,7 @@ $red: #EA323E;
 $purple: #2E2C41;
 $black: #191919;
 $text: #9298B0;
+$bg_blue: #EEF2F5;
 // colors
 
 * {
@@ -153,6 +154,73 @@ address {
 }
 // global var
 
+
+// artist
+#artist {
+    background-color: $bg_blue;
+    padding: 85px 0;
+    .artist_title_under {
+        margin-top: 17px;
+        text-align: center;
+        color: $purple;
+        font-family: $ALS;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 32px;
+    }
+
+    .artist_slider {
+        margin-bottom: 40px;
+        @include flex-full-center();
+        position: relative;
+
+        .artist_btn {
+            cursor: pointer;
+            position: absolute;
+            filter: drop-shadow(0px 8px 32px rgba(0, 0, 0, 0.10));
+        }
+
+        .artist_prev {
+            left: -104px;
+        }
+
+        .artist_next {
+            right: -104px;
+        }
+    }
+
+    .artist_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 147px;
+            height: 147px;
+            border-radius: 50%;
+        }
+
+        h6 {
+            margin: 14px 0 3px 0;
+            color: $purple;
+            text-align: center;
+            font-family: $ALS;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        p {
+            color: $purple;
+            text-align: center;
+            font-family: $ALS;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+// artist
 
 // house
 #house {

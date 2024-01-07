@@ -20,6 +20,23 @@
         }
     }
 
+    #artist {
+        .artist_slider {
+            .artist_btn {
+                z-index: 2;
+            }
+            
+            .artist_prev {
+                left: -30px;
+            }
+    
+            .artist_next {
+                right: -30px;
+            }   
+        }
+    }
+    
+
     #house {
         .house_card {
             h6 {

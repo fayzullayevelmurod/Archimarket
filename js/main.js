@@ -21,3 +21,30 @@ let swiper_one = new Swiper(".youtubeSwiper", {
     },
 });
 // youtube channel
+
+// artist slider
+let swiper_two = new Swiper(".artistSwiper", {
+    navigation: {
+      nextEl: ".artist_next",
+      prevEl: ".artist_prev",
+    },
+    breakpoints: {
+        300: {
+            slidesPerView: 1,
+            spaceBetween: 18,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 18,
+        },
+        993: {
+            slidesPerView: 6,
+            spaceBetween: 18,
+        },
+    },
+});
+// artist slider
