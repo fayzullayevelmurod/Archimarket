@@ -107,6 +107,34 @@ address {
   opacity: 0.5;
 }
 
+#house {
+  margin: 85px 0;
+}
+#house .main_title {
+  margin-bottom: 28px;
+}
+#house .house_card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 43px;
+}
+#house .house_card img {
+  width: 100%;
+}
+#house .house_card h6 {
+  height: 54px;
+  position: absolute;
+  left: 21px;
+  right: 21px;
+  bottom: 17px;
+  color: #fff;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
 #youtube_channel {
   margin: 85px 0 79px 0;
 }
@@ -201,6 +229,11 @@ footer p a:hover {
   #youtube_channel .youtube_channel_slider .channel_next {
     right: -30px;
   }
+  #house .house_card h6 {
+    left: 10px;
+    right: 10px;
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width: 1114px) {
   footer .footer_link {
@@ -222,6 +255,14 @@ footer p a:hover {
     padding: 13px 25px;
     font-size: 15px;
   }
+  #house .house_card {
+    margin-bottom: 20px;
+  }
+  #house .house_card h6 {
+    left: 21px;
+    right: 21px;
+    font-size: 23px;
+  }
 }
 @media only screen and (max-width: 576px) {
   #youtube_channel {
@@ -232,6 +273,9 @@ footer p a:hover {
   }
   #youtube_channel .youtube_card .youtube_card_img .youtube_play_btn {
     width: 50px;
+  }
+  #house {
+    margin: 50px 0;
   }
   footer .footer_top {
     margin-bottom: 20px;
