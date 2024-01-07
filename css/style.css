@@ -46,9 +46,11 @@ input {
 }
 
 button {
-  border: none;
   cursor: pointer;
   background: transparent;
+}
+button:focus {
+  outline: none;
 }
 
 address {
@@ -63,6 +65,87 @@ address {
 .container {
   max-width: 1247px;
   padding: 0 20px;
+}
+
+.main_title {
+  color: #2E2C41;
+  text-align: center;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 108.896%;
+}
+
+.main_btn {
+  padding: 15px 40px;
+  margin: 0 auto;
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border-radius: 10px;
+  border: 1px solid #2E2C41 !important;
+}
+.main_btn:hover {
+  background-color: #2E2C41;
+  color: #fff;
+}
+.main_btn:hover svg path {
+  stroke: #fff;
+}
+
+.swiper-button-disabled {
+  cursor: auto;
+  opacity: 0.5;
+}
+
+#youtube_channel {
+  margin: 85px 0 79px 0;
+}
+#youtube_channel .main_title {
+  margin-bottom: 42px;
+}
+#youtube_channel .youtube_channel_slider {
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#youtube_channel .youtube_channel_slider .channel_btn {
+  transform: translateY(5px);
+  cursor: pointer;
+  position: absolute;
+  filter: drop-shadow(0px 8px 32px rgba(0, 0, 0, 0.1));
+}
+#youtube_channel .youtube_channel_slider .channel_prev {
+  left: -104px;
+}
+#youtube_channel .youtube_channel_slider .channel_next {
+  right: -104px;
+}
+#youtube_channel .youtube_card .youtube_card_img {
+  position: relative;
+}
+#youtube_channel .youtube_card .youtube_card_img .youtube_img {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+#youtube_channel .youtube_card .youtube_card_img .youtube_play_btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 footer {
@@ -82,6 +165,10 @@ footer .footer_link a {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  transition: 0.2s ease;
+}
+footer .footer_link a:hover {
+  text-decoration-line: underline;
 }
 footer p {
   color: #fff;
@@ -94,4 +181,65 @@ footer p {
 footer p a {
   color: #fff;
   text-decoration-line: underline;
+  transition: 0.2s ease;
+}
+footer p a:hover {
+  color: #EEF2F5;
+}
+
+@media only screen and (max-width: 1400px) {
+  .swiper-button-disabled {
+    cursor: auto;
+    opacity: 0.8;
+  }
+  #youtube_channel .youtube_channel_slider .channel_btn {
+    z-index: 2;
+  }
+  #youtube_channel .youtube_channel_slider .channel_prev {
+    left: -30px;
+  }
+  #youtube_channel .youtube_channel_slider .channel_next {
+    right: -30px;
+  }
+}
+@media only screen and (max-width: 1114px) {
+  footer .footer_link {
+    margin-top: 20px;
+    gap: 10px auto;
+  }
+}
+@media only screen and (max-width: 993px) {
+  footer .footer_link {
+    margin-top: 20px;
+    gap: 10px 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main_title {
+    font-size: 25px;
+  }
+  .main_btn {
+    padding: 13px 25px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #youtube_channel {
+    margin: 50px 0;
+  }
+  #youtube_channel .main_title {
+    margin-bottom: 25px;
+  }
+  #youtube_channel .youtube_card .youtube_card_img .youtube_play_btn {
+    width: 50px;
+  }
+  footer .footer_top {
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .footer_link {
+    flex-direction: column;
+    align-items: start;
+  }
 }/*# sourceMappingURL=style.css.map */

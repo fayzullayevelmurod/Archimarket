@@ -16,6 +16,11 @@ footer {
             font-weight: 400;
             line-height: normal;
             text-decoration: none;
+            @include transition;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
         }
     }
 
@@ -30,6 +35,11 @@ footer {
         a {
             color: $white;
             text-decoration-line: underline;
+            @include transition;
+
+            &:hover {
+                color: #EEF2F5;
+            }
         }
     }
 }

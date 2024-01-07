@@ -1,0 +1,82 @@
+@media only screen and (max-width: 1400px) {
+    .swiper-button-disabled {
+        cursor: auto;
+        opacity: .8;
+    }
+
+    #youtube_channel {
+        .youtube_channel_slider {
+            .channel_btn {
+                z-index: 2;
+            }
+            
+            .channel_prev {
+                left: -30px;
+            }
+    
+            .channel_next {
+                right: -30px;
+            }   
+        }
+    }
+}
+
+@media only screen and (max-width: 1114px) {
+    footer {
+        .footer_link {
+            margin-top: 20px;
+            gap: 10px auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 993px) {
+    footer {
+        .footer_link {
+            margin-top: 20px;
+            gap: 10px 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main_title {
+        font-size: 25px;
+    }
+
+    .main_btn {
+        padding: 13px 25px;
+        font-size: 15px;
+    }
+} 
+
+@media only screen and (max-width: 576px) {
+    
+    #youtube_channel {
+        margin: 50px 0;
+        .main_title {
+            margin-bottom: 25px;
+        }
+
+        .youtube_card {
+            .youtube_card_img {
+                .youtube_play_btn {
+                    width: 50px;
+                }
+            }
+        }
+
+    }
+
+    footer {
+        .footer_top {
+            margin-bottom: 20px;
+            flex-direction: column;
+            align-items: start;
+        }
+        .footer_link {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+}
