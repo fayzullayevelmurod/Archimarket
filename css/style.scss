@@ -312,6 +312,103 @@ address {
 // youtube_channel
 
 
+// contact
+#contact {
+    padding: 85px 0 76px 0;
+    background-color: $bg_blue;
+    .contact_text {
+        .main_title {
+            text-align: left;
+            margin-bottom: 19px;
+        }
+
+        p {
+            max-width: 390px;
+            color: $purple;
+            font-family: $ALS;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+
+        .email_input {
+            padding: 15px 25px 11px 25px;
+            border-radius: 50px;
+            background: $white;
+            margin-bottom: 16px;
+
+            input {
+                margin-left: 8px;
+                border: none;
+                color: $purple;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        button {
+            border-radius: 50px;
+            background: $red;
+            border: none;
+            height: 50px;
+            width: 100%;
+            color: #FFF;
+            font-family: $ALS;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .form_checkbox {
+            margin-top: 22px;
+            @include flex-center();
+            gap: 11px;
+
+            input {
+                font-size: 14px;
+                appearance:none;
+                width: 16px;
+                border-radius: 2px;
+                height: 16px;
+                background-color: $white;
+                accent-color: $red;
+            }
+
+            input[type='checkbox']:checked:before {
+                content:'\2713'; 
+                background:transparent; 
+                width: 100%; 
+                height: 100%; 
+                display: flex; 
+                align-items:center; justify-content:center; 
+                color:$red; 
+                font-weight:bold; 
+            }
+
+            label {
+                margin-bottom: 0;
+                color: $purple;
+                font-family: $ALS;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: normal;
+
+                a {
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
+// contact
+
 
 
 @import 'header';

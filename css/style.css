@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -234,6 +235,93 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#contact {
+  padding: 85px 0 76px 0;
+  background-color: #EEF2F5;
+}
+#contact .contact_text .main_title {
+  text-align: left;
+  margin-bottom: 19px;
+}
+#contact .contact_text p {
+  max-width: 390px;
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+#contact .contact_text .email_input {
+  padding: 15px 25px 11px 25px;
+  border-radius: 50px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+#contact .contact_text .email_input input {
+  margin-left: 8px;
+  border: none;
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+#contact .contact_text .email_input input:focus {
+  outline: none;
+}
+#contact .contact_text button {
+  border-radius: 50px;
+  background: #EA323E;
+  border: none;
+  height: 50px;
+  width: 100%;
+  color: #FFF;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+#contact .contact_text .form_checkbox {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+#contact .contact_text .form_checkbox input {
+  font-size: 14px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  border-radius: 2px;
+  height: 16px;
+  background-color: #fff;
+  accent-color: #EA323E;
+}
+#contact .contact_text .form_checkbox input[type=checkbox]:checked:before {
+  content: "✓";
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #EA323E;
+  font-weight: bold;
+}
+#contact .contact_text .form_checkbox label {
+  margin-bottom: 0;
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+#contact .contact_text .form_checkbox label a {
+  text-decoration-line: underline;
 }
 
 footer {
