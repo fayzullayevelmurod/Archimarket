@@ -303,6 +303,7 @@ address {
           user-select: none;
 }
 #contact .contact_text .form_checkbox input {
+  flex-shrink: 0;
   font-size: 14px;
   -webkit-appearance: none;
      -moz-appearance: none;

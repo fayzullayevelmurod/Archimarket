@@ -317,6 +317,7 @@ address {
 #contact {
     padding: 85px 0 76px 0;
     background-color: $bg_blue;
+
     .contact_text {
         .main_title {
             width: 516px;
@@ -381,6 +382,7 @@ address {
             user-select: none;
 
             input {
+                flex-shrink: 0;
                 font-size: 14px;
                 appearance:none;
                 width: 16px;
