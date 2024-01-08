@@ -59,6 +59,14 @@
 
 @media only screen and (max-width: 993px) {
 
+    .col-md-12 {
+        padding: 0;
+    }
+
+    .col-sm-12 {
+        padding: 0;
+    }
+
     #contact {
         padding: 50px 0;
 
@@ -67,14 +75,21 @@
                 width: 100%;
             }
 
+            .email_input {
+                white-space: nowrap;
+            }
+
             .contact_botton_link {
                 display: block;
                 margin-bottom: 40px;
             }
 
             .contact_bottom_btn {
-                padding: 25px 15px;
-                display: inline;
+                padding: 15px 25px;
+                display: inline-block;
+                white-space: nowrap;
+                margin-bottom: 10px;
+
             }
 
         }
