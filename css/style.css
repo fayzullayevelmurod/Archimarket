@@ -141,6 +141,9 @@ address {
   right: -104px;
 }
 #artist .artist_card {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,6 +245,7 @@ address {
   background-color: #EEF2F5;
 }
 #contact .contact_text .main_title {
+  width: 516px;
   text-align: left;
   margin-bottom: 19px;
 }
@@ -283,12 +287,20 @@ address {
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
+  transition: 0.2s ease;
+}
+#contact .contact_text button:hover {
+  background-color: #2E2C41;
 }
 #contact .contact_text .form_checkbox {
   margin-top: 22px;
+  margin-bottom: 45px;
   display: flex;
   align-items: center;
   gap: 11px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #contact .contact_text .form_checkbox input {
   font-size: 14px;
@@ -322,6 +334,41 @@ address {
 }
 #contact .contact_text .form_checkbox label a {
   text-decoration-line: underline;
+}
+#contact .contact_text .contact_text_bottom span {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+#contact .contact_text .contact_text_bottom .contact_botton_link {
+  color: #EA323E;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+#contact .contact_text .contact_bottom_btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  padding: 15px 10px;
+}
+#contact .contact_text .contact_bottom_btn:hover {
+  text-decoration: none;
+  background-color: #fff;
+}
+#contact .contact_text .contact_bottom_btn span {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
 }
 
 footer {
@@ -399,6 +446,20 @@ footer p a:hover {
   }
 }
 @media only screen and (max-width: 993px) {
+  #contact {
+    padding: 50px 0;
+  }
+  #contact .contact_text .main_title {
+    width: 100%;
+  }
+  #contact .contact_text .contact_botton_link {
+    display: block;
+    margin-bottom: 40px;
+  }
+  #contact .contact_text .contact_bottom_btn {
+    padding: 25px 15px;
+    display: inline;
+  }
   footer .footer_link {
     margin-top: 20px;
     gap: 10px 20px;

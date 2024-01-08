@@ -154,11 +154,11 @@ address {
 }
 // global var
 
-
 // artist
 #artist {
     background-color: $bg_blue;
     padding: 85px 0;
+
     .artist_title_under {
         margin-top: 17px;
         text-align: center;
@@ -191,9 +191,11 @@ address {
     }
 
     .artist_card {
+        user-select: none;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         img {
             width: 147px;
             height: 147px;
@@ -311,13 +313,13 @@ address {
 }
 // youtube_channel
 
-
 // contact
 #contact {
     padding: 85px 0 76px 0;
     background-color: $bg_blue;
     .contact_text {
         .main_title {
+            width: 516px;
             text-align: left;
             margin-bottom: 19px;
         }
@@ -364,12 +366,19 @@ address {
             font-size: 18px;
             font-weight: 700;
             line-height: normal;
+            @include transition();
+
+            &:hover {
+                background-color: $purple;
+            }
         }
 
         .form_checkbox {
             margin-top: 22px;
+            margin-bottom: 45px;
             @include flex-center();
             gap: 11px;
+            user-select: none;
 
             input {
                 font-size: 14px;
@@ -403,6 +412,47 @@ address {
                 a {
                     text-decoration-line: underline;
                 }
+            }
+        }
+
+        .contact_text_bottom {
+            span {
+                color: $purple;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 8px;
+            }
+
+            .contact_botton_link {
+                color: $red;
+                font-family: $ALS;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .contact_bottom_btn {
+            @include flex-center();
+            gap: 9px;
+            border-radius: 20px;
+            border: 1px solid $white;
+            padding: 15px 10px;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $white;
+            }
+
+            span {
+                color: $purple;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 0;
             }
         }
     }

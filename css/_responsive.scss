@@ -58,6 +58,29 @@
 }
 
 @media only screen and (max-width: 993px) {
+
+    #contact {
+        padding: 50px 0;
+
+        .contact_text  {
+            .main_title {
+                width: 100%;
+            }
+
+            .contact_botton_link {
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .contact_bottom_btn {
+                padding: 25px 15px;
+                display: inline;
+            }
+
+        }
+
+    }
+
     footer {
         .footer_link {
             margin-top: 20px;
