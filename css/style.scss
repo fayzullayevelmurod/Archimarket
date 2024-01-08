@@ -258,6 +258,145 @@ address {
 }
 // house
 
+// recommend
+#recommend {
+
+    // .col-lg-6 {
+    //     padding: 0;
+    // }
+    
+    // .col-md-12 {
+    //     padding: 0;
+    // }
+
+    // .left_card {
+    //     padding-right: 20px;
+    // }
+
+    .recommend_cards {
+        margin-top: 33px;
+    }
+
+    .card_right {
+        .recommend_card {
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 20px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .recommend_card {
+        border-radius: 20px;
+        overflow: hidden;
+        background: $white;
+        box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.10);
+        
+        img {
+            width: 100%;
+        }
+
+        .recommend_card_content {
+            padding: 15px 19px;
+
+            p {
+                color: $text;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            h6 {
+                color: $purple;
+                font-family: $ALS;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 17px;
+            }
+
+            .recommend_card_bottom {
+                margin-top: 32px;
+                @include flex-center();
+                gap: 23px;
+
+                .eye , .heart {
+                    @include flex-center();
+                    gap: 8px;
+
+
+                    img {
+                        width: 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                span {
+                    color: $text;
+                    font-family: $ALS;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+        }
+
+        .recommend_card_content_min {
+            padding: 11px 13px 11px 17px;
+
+            p {
+                margin-bottom: 8px;
+                color: $text;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            h6 {
+                color: $purple;
+                font-family: $ALS;
+                font-size: 17px;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 11px;
+            }
+
+            .recommend_card_bottom {
+                @include flex-center();
+                gap: 18px;
+
+                .eye , .heart {
+                    @include flex-center();
+                    gap: 6px;
+
+
+                    img {
+                        width: 16px;
+                        cursor: pointer;
+                    }
+                }
+
+                span {
+                    white-space: nowrap;
+                    color: $text;
+                    font-family: $ALS;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+// recommend
+
 // youtube_channel
 #youtube_channel {
     margin: 85px 0 79px 0;

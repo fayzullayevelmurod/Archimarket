@@ -59,14 +59,6 @@
 
 @media only screen and (max-width: 993px) {
 
-    .col-md-12 {
-        padding: 0;
-    }
-
-    .col-sm-12 {
-        padding: 0;
-    }
-
     #contact {
         padding: 50px 0;
 
@@ -105,6 +97,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .col-md-12 {
+        padding: 0;
+    }
+
+    .col-sm-12 {
+        padding: 0;
+    }
+
     .main_title {
         font-size: 25px;
     }
@@ -112,6 +113,14 @@
     .main_btn {
         padding: 13px 25px;
         font-size: 15px;
+    }
+
+    #recommend {
+        .card_right {
+            .col-sm-12 {
+                padding: 0;
+            }
+        }
     }
 
     #house {

@@ -199,6 +199,110 @@ address {
   line-height: normal;
 }
 
+#recommend .recommend_cards {
+  margin-top: 33px;
+}
+#recommend .card_right .recommend_card {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+#recommend .card_right .recommend_card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#recommend .recommend_card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.1);
+}
+#recommend .recommend_card img {
+  width: 100%;
+}
+#recommend .recommend_card .recommend_card_content {
+  padding: 15px 19px;
+}
+#recommend .recommend_card .recommend_card_content p {
+  color: #9298B0;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+#recommend .recommend_card .recommend_card_content h6 {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 17px;
+}
+#recommend .recommend_card .recommend_card_content .recommend_card_bottom {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+#recommend .recommend_card .recommend_card_content .recommend_card_bottom .eye, #recommend .recommend_card .recommend_card_content .recommend_card_bottom .heart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#recommend .recommend_card .recommend_card_content .recommend_card_bottom .eye img, #recommend .recommend_card .recommend_card_content .recommend_card_bottom .heart img {
+  width: 20px;
+  cursor: pointer;
+}
+#recommend .recommend_card .recommend_card_content .recommend_card_bottom span {
+  color: #9298B0;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+#recommend .recommend_card .recommend_card_content_min {
+  padding: 11px 13px 11px 17px;
+}
+#recommend .recommend_card .recommend_card_content_min p {
+  margin-bottom: 8px;
+  color: #9298B0;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+#recommend .recommend_card .recommend_card_content_min h6 {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 11px;
+}
+#recommend .recommend_card .recommend_card_content_min .recommend_card_bottom {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+#recommend .recommend_card .recommend_card_content_min .recommend_card_bottom .eye, #recommend .recommend_card .recommend_card_content_min .recommend_card_bottom .heart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#recommend .recommend_card .recommend_card_content_min .recommend_card_bottom .eye img, #recommend .recommend_card .recommend_card_content_min .recommend_card_bottom .heart img {
+  width: 16px;
+  cursor: pointer;
+}
+#recommend .recommend_card .recommend_card_content_min .recommend_card_bottom span {
+  white-space: nowrap;
+  color: #9298B0;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 #youtube_channel {
   margin: 85px 0 79px 0;
 }
@@ -447,12 +551,6 @@ footer p a:hover {
   }
 }
 @media only screen and (max-width: 993px) {
-  .col-md-12 {
-    padding: 0;
-  }
-  .col-sm-12 {
-    padding: 0;
-  }
   #contact {
     padding: 50px 0;
   }
@@ -478,12 +576,21 @@ footer p a:hover {
   }
 }
 @media only screen and (max-width: 768px) {
+  .col-md-12 {
+    padding: 0;
+  }
+  .col-sm-12 {
+    padding: 0;
+  }
   .main_title {
     font-size: 25px;
   }
   .main_btn {
     padding: 13px 25px;
     font-size: 15px;
+  }
+  #recommend .card_right .col-sm-12 {
+    padding: 0;
   }
   #house .house_card {
     margin-bottom: 20px;
