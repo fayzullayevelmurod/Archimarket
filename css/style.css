@@ -316,6 +316,7 @@ address {
   margin-bottom: 28px;
 }
 #house .house_card {
+  width: 100%;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
