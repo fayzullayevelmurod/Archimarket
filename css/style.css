@@ -112,6 +112,109 @@ address {
   opacity: 0.5;
 }
 
+#services .services_wrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+#services .services_wrapper h6 {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#services .services_wrapper p {
+  color: #2E2C41;
+  font-family: "ALS Hauss", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#services .services_wrapper .one_card h4 {
+  max-width: 189px;
+}
+#services .services_wrapper .one_card p {
+  margin-top: 26px;
+  max-width: 221px;
+}
+#services .services_wrapper .two_card {
+  height: 100%;
+  position: relative;
+}
+#services .services_wrapper .two_card h4 {
+  max-width: 315px;
+  margin-bottom: 18px;
+}
+#services .services_wrapper .two_card p {
+  position: absolute;
+  z-index: 2;
+  max-width: 231px;
+}
+#services .services_wrapper .two_card img {
+  width: 130px;
+  position: absolute;
+  bottom: 0;
+  right: 22px;
+}
+#services .services_wrapper .three_card .services_card_text h4 {
+  margin-bottom: 43px;
+}
+#services .services_wrapper .three_card img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#services .services_wrapper .four_card h4 {
+  max-width: 130px;
+}
+#services .services_wrapper .four_card p {
+  max-width: 160px;
+}
+#services .services_card_mini_in {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#services .services_card_mini {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 26px 10px 26px 30px;
+  border-radius: 20px;
+  background: #EEF2F5;
+  transition: 0.2s ease;
+  border: 1.5px solid transparent;
+}
+#services .services_card_mini:hover {
+  border-radius: 20px;
+  border: 1.5px solid #2E2C41;
+  background: #EEF2F5;
+  box-shadow: 0px 4px 24px 0px rgba(46, 44, 65, 0.15);
+}
+#services .services_card_mini .services_in {
+  display: flex;
+}
+#services .services_card {
+  text-decoration: none;
+  padding: 26px 10px 26px 30px;
+  flex: 1;
+  border-radius: 20px;
+  background: #EEF2F5;
+  transition: 0.2s ease;
+  border: 1.5px solid transparent;
+}
+#services .services_card:hover {
+  border-radius: 20px;
+  border: 1.5px solid #2E2C41;
+  background: #EEF2F5;
+  box-shadow: 0px 4px 24px 0px rgba(46, 44, 65, 0.15);
+}
+
 #popular_project {
   padding: 85px 0;
 }
@@ -138,6 +241,7 @@ address {
   top: 8px;
   right: 8px;
   transition: 0.2s ease;
+  opacity: 0;
 }
 #popular_project .project_card_slider .heart_icon.active path {
   fill: #EA323E;
@@ -200,6 +304,9 @@ address {
   left: -2px;
 }
 #popular_project .popular_project_card:hover .popular_Swiper .swiper-pagination {
+  opacity: 1;
+}
+#popular_project .popular_project_card:hover .heart_icon {
   opacity: 1;
 }
 #popular_project .project_card_content {
@@ -381,6 +488,7 @@ address {
      object-fit: cover;
 }
 #recommend .recommend_card {
+  text-decoration: none;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
