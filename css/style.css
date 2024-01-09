@@ -118,6 +118,10 @@ address {
 #popular_project .popular_project_cards {
   margin: 40px 0;
 }
+#popular_project .popular_Swiper {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
 #popular_project .popular_Swiper img {
   width: 100%;
 }
@@ -134,13 +138,13 @@ address {
   top: 8px;
   right: 8px;
   transition: 0.2s ease;
-  opacity: 0;
 }
-#popular_project .project_card_slider .heart_icon:hover path {
+#popular_project .project_card_slider .heart_icon.active path {
   fill: #EA323E;
   stroke: #EA323E;
 }
 #popular_project .project_card_slider .slider_text {
+  display: block;
   text-decoration: none;
   transition: 0.2s ease;
   z-index: 2;
@@ -175,22 +179,27 @@ address {
   background: #EA323E;
 }
 #popular_project .popular_project_card {
+  text-decoration: none;
+  width: 100%;
   margin-bottom: 24px;
-  overflow: hidden;
-  border: 2px solid transparent;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.1);
   transition: 0.2s ease;
+  position: relative;
 }
-#popular_project .popular_project_card:hover {
+#popular_project .popular_project_card:hover::before {
   box-shadow: 0px 8px 32px 0px rgba(248, 34, 34, 0.1);
+  border-radius: 20px;
   border: 2px solid #EA323E;
+  content: "";
+  position: absolute;
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  top: -1px;
+  left: -2px;
 }
 #popular_project .popular_project_card:hover .popular_Swiper .swiper-pagination {
-  opacity: 1;
-}
-#popular_project .popular_project_card:hover .heart_icon {
   opacity: 1;
 }
 #popular_project .project_card_content {
@@ -225,13 +234,14 @@ address {
   gap: 10px;
 }
 #popular_project .project_card_content .project_card_bottom span {
+  display: block;
   color: #9298B0;
   text-align: right;
   font-family: "ALS Hauss", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  text-decoration-line: strikethrough;
+  text-decoration-line: line-through;
 }
 #popular_project .project_card_content .project_card_bottom h5 {
   margin-bottom: 0;
@@ -315,12 +325,16 @@ address {
 #house .main_title {
   margin-bottom: 28px;
 }
+#house .house_cards {
+  display: flex;
+  gap: 43px 20px;
+  margin-bottom: 43px;
+}
 #house .house_card {
-  width: 100%;
+  width: calc(25% - 15px);
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 43px;
 }
 #house .house_card img {
   width: 100%;
@@ -339,11 +353,25 @@ address {
 }
 
 #recommend .recommend_cards {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
   margin-top: 33px;
   margin-bottom: 46px;
 }
+#recommend .recommend_cards .left_card {
+  flex: 1;
+}
+#recommend .recommend_cards .right_card {
+  flex: 1;
+}
+#recommend .card_right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 #recommend .card_right .recommend_card {
-  margin-bottom: 20px;
+  width: calc(50% - 10px);
   overflow: hidden;
   border-radius: 20px;
 }
@@ -691,6 +719,15 @@ footer p a:hover {
   }
 }
 @media only screen and (max-width: 993px) {
+  #house .house_cards {
+    gap: 20px;
+  }
+  #house .house_card {
+    width: calc(50% - 10px);
+  }
+  #recommend .recommend_cards {
+    flex-direction: column;
+  }
   #contact {
     padding: 50px 0;
   }
@@ -732,9 +769,6 @@ footer p a:hover {
   #recommend .card_right .col-sm-12 {
     padding: 0;
   }
-  #house .house_card {
-    margin-bottom: 20px;
-  }
   #house .house_card h6 {
     left: 21px;
     right: 21px;
@@ -754,8 +788,17 @@ footer p a:hover {
   #youtube_channel .youtube_card .youtube_card_img .youtube_play_btn {
     width: 50px;
   }
+  #recommend .card_right {
+    flex-direction: column;
+  }
+  #recommend .card_right .recommend_card {
+    width: 100%;
+  }
   #house {
     margin: 50px 0;
+  }
+  #house .house_card {
+    width: 100%;
   }
   footer .footer_top {
     margin-bottom: 20px;

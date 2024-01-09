@@ -59,6 +59,25 @@
 
 @media only screen and (max-width: 993px) {
 
+    #house {
+        .house_cards {
+            gap: 20px;
+        }
+        .house_card {
+            width: calc(100% / 2 - 10px);
+        }
+    }
+
+    #recommend {
+        .recommend_cards {
+            flex-direction: column;
+
+            .left_card {
+                // margin-bottom: 40px;
+            }
+        }
+    }
+
     #contact {
         padding: 50px 0;
 
@@ -125,7 +144,6 @@
 
     #house {
         .house_card {
-            margin-bottom: 20px;
 
             h6 {
                 left: 21px;
@@ -158,8 +176,23 @@
 
     }
 
+    #recommend {
+        .card_right {
+            flex-direction: column;
+
+            .recommend_card {
+                width: 100%;
+            }
+        }
+    }
+
     #house {
         margin: 50px 0;
+
+        .house_card {
+            width: calc(100%);
+        }
+        
     }
 
     footer {

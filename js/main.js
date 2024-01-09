@@ -56,3 +56,13 @@ let swiper_three = new Swiper(".popular_Swiper", {
   },
 });
 // popular project
+
+// heart icon
+let heart = document.querySelectorAll('.heart_icon');
+
+heart.forEach(item => {
+  item.addEventListener('click', () =>  {
+    item.classList.toggle('active')
+  })
+})
+// heart icon
