@@ -47,10 +47,7 @@ $bg_blue: #EEF2F5;
     text-decoration: none;
 }
 
-.row {
-    margin: 0;
-    padding: 0;
-}
+// bootstrap not
 
 ul, ol {
     list-style-type: none;
@@ -59,6 +56,11 @@ ul, ol {
 }
 
 li {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
     margin: 0;
     padding: 0;
 }
@@ -72,16 +74,8 @@ a {
     }
 }
 
-img {
-    max-width: 100%;
-}
-
-span, label {
-    display: inline-block;
-}
-
-body {
-    font-style: normal;
+p {
+    margin-bottom: 0;
 }
 
 input {
@@ -94,6 +88,20 @@ button {
     &:focus {
         outline: none;
     }
+}
+// bootstrap not
+
+img {
+    max-width: 100%;
+}
+
+
+span, label {
+    display: inline-block;
+}
+
+body {
+    font-style: normal;
 }
 
 address {
@@ -153,6 +161,171 @@ address {
     opacity: .5;
 }
 // global var
+
+
+// popular_project
+#popular_project {
+    padding: 85px 0;
+
+    .popular_project_cards {
+        margin: 40px 0;
+    }
+
+    .popular_Swiper {
+        img {
+            width: 100%;
+        }
+    }
+
+    .project_card_slider {
+        user-select: none;
+        position: relative;
+
+        .heart_icon {
+            cursor: pointer;
+            z-index: 2;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            @include transition();
+            opacity: 0;
+
+            &:hover {
+                path {
+                    fill: $red;
+                    stroke: $red;
+                }
+            }
+        }
+
+        .slider_text {
+            text-decoration: none;
+            @include transition();
+            z-index: 2;
+            position: absolute;
+            top: 11px;
+            left: 11px;
+            color: #FFF;
+            font-family: $Inter;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: normal;
+            border-radius: 5px;
+            padding: 5px;
+            background: rgba(234, 50, 62, 0.55);
+            backdrop-filter: blur(1px);
+        }
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        padding: 0 19px;
+        @include transition();
+        opacity: 0;
+
+        .swiper-pagination-bullet {
+            flex: 1;
+            height: 3px;
+            border-radius: 0;
+            background: $white;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $red;
+        }
+
+    }
+
+    .popular_project_card {
+        margin-bottom: 24px;
+        overflow: hidden;
+        // cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 20px;
+        background: $white;
+        box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.10);
+        @include transition();
+
+        &:hover {
+            box-shadow: 0px 8px 32px 0px rgba(248, 34, 34, 0.1);
+            border: 2px solid $red;
+
+            .popular_Swiper {
+                .swiper-pagination {
+                    opacity: 1;
+                }
+            }
+
+            .heart_icon {
+                opacity: 1;
+            }
+        }
+
+    }
+    
+    .project_card_content {
+        padding: 9px 17px 22px 17px;
+
+        h6 {
+            color: $purple;
+            font-family: $ALS;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 13px;
+        }
+
+        .card_content_block {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                color: #191919;
+                font-family: $ALS;
+                font-size: 16px;
+                font-weight: 350;
+                line-height: normal;
+            }
+        }
+
+        .project_card_bottom {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 10px;
+
+            span {
+                color: #9298B0;
+                text-align: right;
+                font-family: $ALS;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: strikethrough;
+            }
+
+            h5 {
+                margin-bottom: 0;
+                color: #2E2C41;
+                text-align: right;
+                font-family: $ALS;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .card_content_block:nth-last-child(even) {
+            background-color: $bg_blue;
+        }
+    }
+
+}
+// popular_project
 
 // artist
 #artist {
@@ -260,21 +433,9 @@ address {
 
 // recommend
 #recommend {
-
-    // .col-lg-6 {
-    //     padding: 0;
-    // }
-    
-    // .col-md-12 {
-    //     padding: 0;
-    // }
-
-    // .left_card {
-    //     padding-right: 20px;
-    // }
-
     .recommend_cards {
         margin-top: 33px;
+        margin-bottom: 46px;
     }
 
     .card_right {
