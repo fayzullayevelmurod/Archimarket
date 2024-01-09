@@ -405,7 +405,7 @@ address {
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 17px;
+  margin: 13px 0 17px 0;
 }
 #recommend .recommend_card .recommend_card_content .recommend_card_bottom {
   margin-top: 32px;
@@ -443,7 +443,7 @@ address {
 #recommend .recommend_card .recommend_card_content_min h6 {
   color: #2E2C41;
   font-family: "ALS Hauss", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 11px;
