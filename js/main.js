@@ -156,3 +156,21 @@ let swiper_two = new Swiper(".artistSwiper", {
   },
 });
 // artist slider
+
+// popular project
+let swiper_three = new Swiper(".popular_Swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+// popular project
+
+// heart icon
+let heart = document.querySelectorAll('.heart_icon');
+
+heart.forEach(item => {
+  item.addEventListener('click', () =>  {
+    item.classList.toggle('active')
+  })
+})
+// heart icon

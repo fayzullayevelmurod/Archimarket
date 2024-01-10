@@ -48,6 +48,143 @@
     }
 }
 
+@media only screen and (max-width: 1250px) {
+    #services {
+        .services_wrapper {
+            flex-wrap: wrap;
+            
+            .services_card_mini,
+            .services_card {
+                flex: auto;
+                padding: 20px 10px;
+                width: calc(50% - 10px);
+                text-align: center;
+
+                img {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+
+
+            .services_card_mini  {
+                display: block;
+                width: calc(50% - 10px);
+
+                .services_card_text  {
+                    h4 {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .services_in {
+                    flex-direction: column;
+
+                    p {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .services_card_mini_in {
+                flex: auto;
+                order: 3;
+                width: 100%;
+                flex-direction: row;
+            }
+
+            .one_card  {
+                order: 1;
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    order: 1;
+                    max-width: 100%;
+                }
+                img {
+                    order: 3;
+                    // width: 347px;
+                }
+                p {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                    order: 2;
+                    max-width: 100%;
+                }
+            }
+
+            .two_card {
+                h4 {
+                    max-width: 100%;
+                }
+                img {
+                    position: static;
+                    // width: 347px;
+                }
+
+                p {
+                    display: block;
+                    max-width: 100% ;
+                    position: static;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .three_card {
+                .services_in {
+                    display: flex;
+    
+                    img {
+                        object-fit: cover;
+                        flex: 0;
+                        width: 347px;
+                    }
+                }
+            }
+
+            .four_card {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    order: 1;
+                    max-width: 100%;
+                }
+                img {
+                    order: 3;
+                    // width: 400px;
+                }
+                p {
+                    order: 2;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    #contact {
+        .contact_wrapper {
+            flex-direction: column;
+
+            .contact_img {
+                img {
+                    width: 100%;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .contact_text {
+            .contact_bottom_btn {
+                width: auto;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1114px) {
     footer {
         .footer_link {
@@ -58,6 +195,50 @@
 }
 
 @media only screen and (max-width: 993px) {
+
+    #house {
+        .house_cards {
+            gap: 20px;
+        }
+        .house_card {
+            width: calc(100% / 2 - 10px);
+        }
+    }
+
+    #recommend {
+        .recommend_cards {
+            flex-direction: column;
+        }
+    }
+
+    #contact {
+        padding: 50px 0 20px 0;
+
+        .contact_text  {
+            .main_title {
+                width: 100%;
+            }
+
+            .email_input {
+                white-space: nowrap;
+            }
+
+            .contact_botton_link {
+                display: block;
+            }
+
+            .contact_bottom_btn {
+                padding: 15px 25px;
+                display: inline-block;
+                white-space: nowrap;
+                margin-bottom: 10px;
+
+            }
+
+        }
+
+    }
+
     footer {
         .footer_link {
             margin-top: 20px;
@@ -67,6 +248,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .col-md-12 {
+        padding: 0;
+    }
+
+    .col-sm-12 {
+        padding: 0;
+    }
+
     .main_title {
         font-size: 25px;
     }
@@ -76,9 +266,43 @@
         font-size: 15px;
     }
 
+    #services {
+        .services_wrapper {
+            flex-direction: column;
+
+            .services_card_mini,
+            .services_card {
+                width: 100%;
+            }
+
+            .services_card_mini_in {
+                flex-direction: column;
+            }
+        }
+    }
+
+    #contact {
+        .contact_text {
+
+            .contact_text_bottom {
+                flex-direction: column;
+            }
+            .contact_bottom_btn {
+                width: auto;
+            }
+        }
+    }
+
+    #recommend {
+        .card_right {
+            .col-sm-12 {
+                padding: 0;
+            }
+        }
+    }
+
     #house {
         .house_card {
-            margin-bottom: 20px;
 
             h6 {
                 left: 21px;
@@ -90,6 +314,23 @@
 } 
 
 @media only screen and (max-width: 576px) {
+
+    #services {
+        .services_wrapper {
+            flex-direction: column;
+
+            .services_card_mini,
+            .services_card {
+                padding: 20px 10px;
+
+                img {
+                    width: 100%;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }                
+            }
+        }
+    }
 
     #artist {
         padding: 50px 0;
@@ -111,8 +352,23 @@
 
     }
 
+    #recommend {
+        .card_right {
+            flex-direction: column;
+
+            .recommend_card {
+                width: 100%;
+            }
+        }
+    }
+
     #house {
         margin: 50px 0;
+
+        .house_card {
+            width: calc(100%);
+        }
+        
     }
 
     footer {
