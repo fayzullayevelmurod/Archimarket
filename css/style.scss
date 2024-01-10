@@ -114,7 +114,7 @@ address {
 }
 
 .container {
-    max-width: 1247px;
+    max-width: 1267px;
     padding: 0 20px;
 }
 
@@ -222,6 +222,15 @@ address {
         }
 
         .three_card {
+            .services_in {
+                display: flex;
+
+                img {
+                    flex: 1;
+                    width: 100%;
+                }
+            }
+
             .services_card_text {
                 h4 {
                     margin-bottom: 43px;
@@ -254,7 +263,6 @@ address {
     }
 
     .services_card_mini {
-        box-sizing: border-box;
         text-decoration: none;
         padding: 26px 10px 26px 30px;
         border-radius: 20px;
@@ -307,6 +315,7 @@ address {
 
         img {
             width: 100%;
+            border-radius: 20px 20px 0 0;
         }
     }
 
@@ -381,8 +390,6 @@ address {
         @include transition();
         position: relative;
 
-        
-
         &:hover {
             &::before {
                 box-shadow: 0px 8px 32px 0px rgba(248, 34, 34, 0.1);
@@ -390,15 +397,21 @@ address {
                 border: 2px solid $red;
                 content: '';
                 position: absolute;
-                width: calc(100% + 3px);
-                height: calc(100% + 3px);
-                top: -1px;
-                left: -2px;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
             }
 
             .popular_Swiper {
                 .swiper-pagination {
                     opacity: 1;
+                }
+                
+                img {
+                    border: 2px solid $red;
+                    border-bottom: none;
+                    display: block;
                 }
             }
 
@@ -733,7 +746,7 @@ address {
         }
     }
 }
-// recommend
+// recommend  
 
 // youtube_channel
 #youtube_channel {
@@ -795,11 +808,20 @@ address {
     padding: 85px 0 76px 0;
     background-color: $bg_blue;
 
+    .contact_wrapper {
+        display: flex;
+        gap: 40px;
+    }
+
     .contact_text {
         .main_title {
             width: 516px;
             text-align: left;
             margin-bottom: 19px;
+        }
+
+        .contact_text_bottom {
+            display: flex;
         }
 
         p {
@@ -813,12 +835,15 @@ address {
         }
 
         .email_input {
+            width: 100%;
             padding: 15px 25px 11px 25px;
             border-radius: 50px;
             background: $white;
             margin-bottom: 16px;
+            @include flex-center();
 
             input {
+                width: 95%;
                 margin-left: 8px;
                 border: none;
                 color: $purple;
@@ -895,6 +920,15 @@ address {
         }
 
         .contact_text_bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .contact_btns {
+                display: flex;
+                flex-direction: column;
+            }
+
             span {
                 color: $purple;
                 font-family: $ALS;
@@ -914,7 +948,8 @@ address {
         }
 
         .contact_bottom_btn {
-            @include flex-center();
+            width: 188px;
+            @include flex-full-center();
             gap: 9px;
             border-radius: 20px;
             border: 1px solid $white;
@@ -933,6 +968,12 @@ address {
                 line-height: normal;
                 margin-bottom: 0;
             }
+        }
+    }
+
+    .contact_img {
+        img {
+            transform: translateX(14px)
         }
     }
 }

@@ -68,7 +68,7 @@ address {
 }
 
 .container {
-  max-width: 1247px;
+  max-width: 1267px;
   padding: 0 20px;
 }
 
@@ -160,6 +160,13 @@ address {
   bottom: 0;
   right: 22px;
 }
+#services .services_wrapper .three_card .services_in {
+  display: flex;
+}
+#services .services_wrapper .three_card .services_in img {
+  flex: 1;
+  width: 100%;
+}
 #services .services_wrapper .three_card .services_card_text h4 {
   margin-bottom: 43px;
 }
@@ -182,7 +189,6 @@ address {
   gap: 20px;
 }
 #services .services_card_mini {
-  box-sizing: border-box;
   text-decoration: none;
   padding: 26px 10px 26px 30px;
   border-radius: 20px;
@@ -227,6 +233,7 @@ address {
 }
 #popular_project .popular_Swiper img {
   width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 #popular_project .project_card_slider {
   -webkit-user-select: none;
@@ -298,13 +305,18 @@ address {
   border: 2px solid #EA323E;
   content: "";
   position: absolute;
-  width: calc(100% + 3px);
-  height: calc(100% + 3px);
-  top: -1px;
-  left: -2px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 #popular_project .popular_project_card:hover .popular_Swiper .swiper-pagination {
   opacity: 1;
+}
+#popular_project .popular_project_card:hover .popular_Swiper img {
+  border: 2px solid #EA323E;
+  border-bottom: none;
+  display: block;
 }
 #popular_project .popular_project_card:hover .heart_icon {
   opacity: 1;
@@ -624,10 +636,17 @@ address {
   padding: 85px 0 76px 0;
   background-color: #EEF2F5;
 }
+#contact .contact_wrapper {
+  display: flex;
+  gap: 40px;
+}
 #contact .contact_text .main_title {
   width: 516px;
   text-align: left;
   margin-bottom: 19px;
+}
+#contact .contact_text .contact_text_bottom {
+  display: flex;
 }
 #contact .contact_text p {
   max-width: 390px;
@@ -639,12 +658,16 @@ address {
   margin-bottom: 32px;
 }
 #contact .contact_text .email_input {
+  width: 100%;
   padding: 15px 25px 11px 25px;
   border-radius: 50px;
   background: #fff;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 #contact .contact_text .email_input input {
+  width: 95%;
   margin-left: 8px;
   border: none;
   color: #2E2C41;
@@ -716,6 +739,15 @@ address {
 #contact .contact_text .form_checkbox label a {
   text-decoration-line: underline;
 }
+#contact .contact_text .contact_text_bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#contact .contact_text .contact_text_bottom .contact_btns {
+  display: flex;
+  flex-direction: column;
+}
 #contact .contact_text .contact_text_bottom span {
   color: #2E2C41;
   font-family: "ALS Hauss", sans-serif;
@@ -732,8 +764,10 @@ address {
   line-height: normal;
 }
 #contact .contact_text .contact_bottom_btn {
+  width: 188px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
   border-radius: 20px;
   border: 1px solid #fff;
@@ -750,6 +784,9 @@ address {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 0;
+}
+#contact .contact_img img {
+  transform: translateX(14px);
 }
 
 footer {
@@ -820,6 +857,109 @@ footer p a:hover {
     font-size: 18px;
   }
 }
+@media only screen and (max-width: 1250px) {
+  #services .services_wrapper {
+    flex-wrap: wrap;
+  }
+  #services .services_wrapper .services_card_mini,
+  #services .services_wrapper .services_card {
+    flex: auto;
+    padding: 20px 10px;
+    width: calc(50% - 10px);
+    text-align: center;
+  }
+  #services .services_wrapper .services_card_mini img,
+  #services .services_wrapper .services_card img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #services .services_wrapper .services_card_mini {
+    display: block;
+    width: calc(50% - 10px);
+  }
+  #services .services_wrapper .services_card_mini .services_card_text h4 {
+    margin-bottom: 20px;
+  }
+  #services .services_wrapper .services_card_mini .services_in {
+    flex-direction: column;
+  }
+  #services .services_wrapper .services_card_mini .services_in p {
+    margin-bottom: 20px;
+  }
+  #services .services_wrapper .services_card_mini_in {
+    flex: auto;
+    order: 3;
+    width: 100%;
+    flex-direction: row;
+  }
+  #services .services_wrapper .one_card {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  #services .services_wrapper .one_card h4 {
+    order: 1;
+    max-width: 100%;
+  }
+  #services .services_wrapper .one_card img {
+    order: 3;
+  }
+  #services .services_wrapper .one_card p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    order: 2;
+    max-width: 100%;
+  }
+  #services .services_wrapper .two_card h4 {
+    max-width: 100%;
+  }
+  #services .services_wrapper .two_card img {
+    position: static;
+  }
+  #services .services_wrapper .two_card p {
+    display: block;
+    max-width: 100%;
+    position: static;
+  }
+  #services .services_wrapper .two_card p br {
+    display: none;
+  }
+  #services .services_wrapper .three_card .services_in {
+    display: flex;
+  }
+  #services .services_wrapper .three_card .services_in img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    flex: 0;
+    width: 347px;
+  }
+  #services .services_wrapper .four_card {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  #services .services_wrapper .four_card h4 {
+    order: 1;
+    max-width: 100%;
+  }
+  #services .services_wrapper .four_card img {
+    order: 3;
+  }
+  #services .services_wrapper .four_card p {
+    order: 2;
+    max-width: 100%;
+  }
+  #contact .contact_wrapper {
+    flex-direction: column;
+  }
+  #contact .contact_wrapper .contact_img img {
+    width: 100%;
+    transform: translateX(0);
+  }
+  #contact .contact_text .contact_bottom_btn {
+    width: auto;
+  }
+}
 @media only screen and (max-width: 1114px) {
   footer .footer_link {
     margin-top: 20px;
@@ -837,7 +977,7 @@ footer p a:hover {
     flex-direction: column;
   }
   #contact {
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
   }
   #contact .contact_text .main_title {
     width: 100%;
@@ -847,7 +987,6 @@ footer p a:hover {
   }
   #contact .contact_text .contact_botton_link {
     display: block;
-    margin-bottom: 40px;
   }
   #contact .contact_text .contact_bottom_btn {
     padding: 15px 25px;
@@ -874,6 +1013,22 @@ footer p a:hover {
     padding: 13px 25px;
     font-size: 15px;
   }
+  #services .services_wrapper {
+    flex-direction: column;
+  }
+  #services .services_wrapper .services_card_mini,
+  #services .services_wrapper .services_card {
+    width: 100%;
+  }
+  #services .services_wrapper .services_card_mini_in {
+    flex-direction: column;
+  }
+  #contact .contact_text .contact_text_bottom {
+    flex-direction: column;
+  }
+  #contact .contact_text .contact_bottom_btn {
+    width: auto;
+  }
   #recommend .card_right .col-sm-12 {
     padding: 0;
   }
@@ -884,6 +1039,20 @@ footer p a:hover {
   }
 }
 @media only screen and (max-width: 576px) {
+  #services .services_wrapper {
+    flex-direction: column;
+  }
+  #services .services_wrapper .services_card_mini,
+  #services .services_wrapper .services_card {
+    padding: 20px 10px;
+  }
+  #services .services_wrapper .services_card_mini img,
+  #services .services_wrapper .services_card img {
+    width: 100%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   #artist {
     padding: 50px 0;
   }
