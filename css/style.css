@@ -152,6 +152,16 @@ address {
   opacity: 0.5;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .select2-container--open .select2-dropdown--below {
   border: 1px solid #aaa !important;
   border-radius: 20px;
@@ -1965,6 +1975,9 @@ footer p a:hover {
     flex: 0;
     width: 347px;
   }
+  #services .services_wrapper .three_card p {
+    width: 100%;
+  }
   #services .services_wrapper .four_card {
     order: 2;
     display: flex;
@@ -1973,6 +1986,7 @@ footer p a:hover {
   #services .services_wrapper .four_card h4 {
     order: 1;
     max-width: 100%;
+    margin-bottom: 15px;
   }
   #services .services_wrapper .four_card img {
     order: 3;

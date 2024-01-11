@@ -143,6 +143,10 @@
                         width: 347px;
                     }
                 }
+
+                p {
+                    width: 100%;
+                }
             }
 
             .four_card {
@@ -152,6 +156,7 @@
                 h4 {
                     order: 1;
                     max-width: 100%;
+                    margin-bottom: 15px;
                 }
                 img {
                     order: 3;

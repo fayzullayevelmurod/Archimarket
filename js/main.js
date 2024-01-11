@@ -59,6 +59,7 @@ function setFill(evt) {
 
   var width = valUpper * 100 / max;
   var left = valLower * 100 / max;
+  console.log(left);
   $('.fill').css('left', 'calc(' + left + '%)');
   $('.fill').css('width', width - left + '%');
 
@@ -93,12 +94,14 @@ $('.easy-basket-filter-info input').keyup(function () {
   // меняем положение ползунков
   $('.lower').val(valLower);
   $('.upper').val(valUpper);
+  setFill();
 });
-$('.easy-basket-filter-info input').focus(function () {
-  $(this).val('');
-});
+// $('.easy-basket-filter-info input').focus(function () {
+//   $(this).val('');
+// });
 $('.easy-basket-lower').blur(function () {
   var valLower = $('.lower').val();
+  console.log(valLower);
   $(this).val(Math.floor(valLower));
 });
 $('.easy-basket-upper').blur(function () {

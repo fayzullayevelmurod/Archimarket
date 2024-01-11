@@ -203,6 +203,16 @@ address {
     cursor: auto;
     opacity: .5;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
 // global var
 
 // Home
