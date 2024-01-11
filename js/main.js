@@ -59,7 +59,6 @@ function setFill(evt) {
 
   var width = valUpper * 100 / max;
   var left = valLower * 100 / max;
-  console.log(left);
   $('.fill').css('left', 'calc(' + left + '%)');
   $('.fill').css('width', width - left + '%');
 
@@ -101,7 +100,6 @@ $('.easy-basket-filter-info input').keyup(function () {
 // });
 $('.easy-basket-lower').blur(function () {
   var valLower = $('.lower').val();
-  console.log(valLower);
   $(this).val(Math.floor(valLower));
 });
 $('.easy-basket-upper').blur(function () {
@@ -177,7 +175,6 @@ $('.popular_Swiper').each(function (i, el) {
     clearTimeout(clr_timeout);
 
     clr_timeout = setTimeout(() => {
-      console.log('ishladi');
       if (x > offsetX && t) {
         offsetX = x;
         swiper_three.slideNext();
@@ -197,7 +194,6 @@ $('.popular_Swiper').each(function (i, el) {
   }
 
   el.onmousemove = e => {
-    // console.log(e.offsetX);
     change_slider(e.offsetX);
   }
 })
@@ -212,3 +208,5 @@ heart.forEach(item => {
   })
 })
 // heart icon
+
+console.log($('.select2-results__option'));
