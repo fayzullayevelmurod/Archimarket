@@ -158,11 +158,46 @@ let swiper_two = new Swiper(".artistSwiper", {
 // artist slider
 
 // popular project
-let swiper_three = new Swiper(".popular_Swiper", {
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
+$('.popular_Swiper').each(function (i, el) {
+  
+  let swiper_three = new Swiper(el, {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  let offsetX = -2;
+  let clr_timeout;
+  let t = true;
+
+  const change_slider = x => {
+    clearTimeout(clr_timeout);
+
+    clr_timeout = setTimeout(() => {
+      console.log('ishladi');
+      if (x > offsetX && t) {
+        offsetX = x;
+        swiper_three.slideNext();
+        t = false;
+        setTimeout(() => {
+          t = true;
+        }, 600);
+      } else if (x < offsetX && t) {
+        offsetX = x;
+        swiper_three.slidePrev();
+        t = false;
+        setTimeout(() => {
+          t = true;
+        }, 600);
+      }
+    }, 30);
+  }
+
+  el.onmousemove = e => {
+    // console.log(e.offsetX);
+    change_slider(e.offsetX);
+  }
+})
 // popular project
 
 // heart icon

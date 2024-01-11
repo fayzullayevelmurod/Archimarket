@@ -68,8 +68,10 @@ li {
 a {
     color: inherit;
     display: inline-block;
-
+    text-decoration: none;
+    
     &:hover {
+        text-decoration: none;
         color: inherit;
     }
 }
@@ -242,8 +244,8 @@ address {
     margin-bottom: 275px;
     
     &__top {
-        padding-top: 57px;
-        padding-bottom: 187px;
+        padding-top: 52px;
+        padding-bottom: 189px;
 
         h1 {
             color: #FFF;
@@ -253,7 +255,7 @@ address {
             font-weight: 500;
             line-height: 108.896%;
             max-width: 539px;
-            margin-bottom: 56px;
+            margin-bottom: 64px;
         }
 
         .text_animation {
@@ -263,6 +265,7 @@ address {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            padding-left: 5px;
 
             span {
                 color: #EA323E;
@@ -271,7 +274,7 @@ address {
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                margin-left: 6px;
+                margin-left: 2px;
             }
         }
     }
@@ -285,7 +288,7 @@ address {
             width: calc(100% - 40px);
             left: 20px;
             top: 0;
-            transform: translateY(calc(-50% + 30px));
+            transform: translateY(calc(-50% + 19px));
 
             &__body {
                 gap: 23px;
@@ -316,7 +319,8 @@ address {
                         border: none;
                         border-radius: 50px;
                         background: #EEF2F5;
-                        padding-left: 17px;
+                        padding-left: 10px;
+                        padding-bottom: 4px;
 
                         .select2-selection__rendered {
                             color: #2E2C41;
@@ -355,6 +359,7 @@ address {
 
             .right_title {
                 gap: 9px;
+                margin-left: -2px;
 
                 span {
                     color: #2E2C41;
@@ -364,6 +369,11 @@ address {
                     font-weight: 700;
                     line-height: normal;
                 }
+            }
+
+            &__right_block {
+                margin-top: -2px;
+                margin-left: 4px;
             }
         }
 
@@ -420,7 +430,8 @@ address {
 
         .title {
             gap: 5px;
-            margin-bottom: 13px;
+            margin-bottom: 18px;
+            padding-left: 8px;
 
             span {
                 color: #2E2C41;
@@ -442,8 +453,8 @@ address {
         }
 
         .checkboxs {
-            gap: 19px;
-            margin: 19px 0 25px;
+            gap: 22px;
+            margin: 16px 0 29px;
         }
 
         .checkbox {
@@ -486,7 +497,7 @@ address {
         }
 
         .easy-basket-filter {
-            margin-top: 14px;
+            margin-top: 17px;
             position: relative;
             margin-bottom: 57px;
             width: 300px;
@@ -503,6 +514,7 @@ address {
                     top: -5px;
                     border-radius: 50%;
                     left: 0;
+                    z-index: -1;
                 }
 
                 &::after {
@@ -560,16 +572,11 @@ address {
         
         input[type=range] {
             -webkit-appearance: none;
+            appearance: none;
             width: 100%;
             margin: 0;
             background: transparent;
-        }
-        
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            cursor: pointer;
-            position: relative;
-            z-index: 3;
+            height: 2px;
         }
         
         input[type=range]:focus, input[type=text]:focus {
@@ -578,12 +585,26 @@ address {
         
         input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none;
+            appearance: none;
             height: 11px;
             width: 11px;
             background: $red;
             border-radius: 10px;
             cursor: pointer;
             margin-top: -5px;
+            position: relative;
+            z-index: 3;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            appearance: none;
+            width: 11px;
+            height: 11px;
+            background-color: #EA323E;
+            border: 0;
+            position: relative;
+            z-index: 3;
+            
         }
         
         input[type=range]::-webkit-slider-runnable-track {
@@ -593,10 +614,18 @@ address {
             background: #9298B0;
             border-radius: 1.3px;
         }
+
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: #9298B0;
+            border-radius: 1.3px;
+        }
         
         .btns {
-            padding-top: 7px;
-            width: 543px;
+            padding-top: 10px;
+            width: 588px;
 
             .main_btn_danger {
                 width: 260px;
@@ -618,7 +647,7 @@ address {
         align-items: stretch;
         gap: 20px;
 
-        h6 {
+        h6, h4 {
             color: $purple;
             font-family: $ALS;
             font-size: 22px;
@@ -634,15 +663,21 @@ address {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            margin-top: -11px;
         }
 
         .one_card {
             h4 {
                 max-width: 189px;
+                margin-bottom: 4px;
+            }
+
+            img {
+                margin-left: 12px;
             }
 
             p {
-                margin-top: 26px;
+                margin-top: 25px;
                 max-width: 221px;
             }
         }
@@ -652,36 +687,45 @@ address {
             position: relative;
             h4 {
                 max-width: 315px;
-                margin-bottom: 18px;
+                margin-bottom: -20px;
             }
 
             p {
                 position: absolute;
                 z-index: 2;
                 max-width: 231px;
+                margin-top: 38px;
             }
 
             img {
-                width: 130px;
+                width: 159px;
                 position: absolute;
-                bottom: 0;
-                right: 22px;
+                bottom: 1px;
+                right: 20px;
             }
         }
 
         .three_card {
+            p {
+                margin-top: -5px;
+                margin-bottom: -16px;
+                width: 226px;
+            }
+            
+
             .services_in {
                 display: flex;
 
                 img {
                     flex: 1;
                     width: 100%;
+                    transform: translate(-14px, -1px);
                 }
             }
 
             .services_card_text {
                 h4 {
-                    margin-bottom: 43px;
+                    margin-bottom: 45px;
                 }
             }
 
@@ -695,6 +739,11 @@ address {
         .four_card {
             h4 {
                 max-width: 130px;
+                margin-bottom: -20px;
+            }
+
+            img {
+                margin-left: 10px;
             }
 
             p {
@@ -707,12 +756,12 @@ address {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 
     .services_card_mini {
         text-decoration: none;
-        padding: 26px 10px 26px 30px;
+        padding: 24px 10px 40px 30px;
         border-radius: 20px;
         background: $bg_blue;
         @include transition();
@@ -732,8 +781,8 @@ address {
 
     .services_card {
         text-decoration: none;
-        padding: 26px 10px 26px 30px;
-        flex: 1;
+        padding: 21px 10px 26px 30px;
+        width: calc(100% / 3 - 15px);
         border-radius: 20px;
         background: $bg_blue;
         @include transition();
@@ -753,8 +802,17 @@ address {
 #popular_project {
     padding: 85px 0;
 
+    .container {
+        padding: 0 9px;
+    }
+
     .popular_project_cards {
-        margin: 40px 0;
+        margin: 40px 0 26px;
+
+        .col-lg-3, .col-md-6, .col-sm-12{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
     }
 
     .popular_Swiper {
@@ -876,9 +934,9 @@ address {
         h6 {
             color: $purple;
             font-family: $ALS;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
-            line-height: normal;
+            line-height: 24px;
             margin-bottom: 13px;
         }
 
@@ -1120,7 +1178,7 @@ address {
             }
 
             .recommend_card_bottom {
-                margin-top: 32px;
+                margin-top: 30px;
                 @include flex-center();
                 gap: 23px;
 
@@ -1147,7 +1205,7 @@ address {
         }
 
         .recommend_card_content_min {
-            padding: 11px 13px 11px 17px;
+            padding: 11px 13px 13px 17px;
 
             p {
                 margin-bottom: 8px;
@@ -1259,13 +1317,23 @@ address {
     .contact_wrapper {
         display: flex;
         gap: 40px;
+        position: relative;
+    }
+
+    .contact_img {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
     }
 
     .contact_text {
         .main_title {
             width: 516px;
             text-align: left;
-            margin-bottom: 19px;
+            margin-bottom: 23px;
+            line-height: 49px;
+            margin-top: -4px;
         }
 
         .contact_text_bottom {
@@ -1279,7 +1347,11 @@ address {
             font-size: 16px;
             font-weight: 400;
             line-height: normal;
-            margin-bottom: 32px;
+            margin-bottom: 34px;
+        }
+
+        form {
+            padding-right: 49px;
         }
 
         .email_input {
@@ -1326,10 +1398,11 @@ address {
 
         .form_checkbox {
             margin-top: 22px;
-            margin-bottom: 45px;
+            margin-bottom: 44px;
             @include flex-center();
             gap: 11px;
             user-select: none;
+            margin-left: 29px;
 
             input {
                 flex-shrink: 0 !important;
@@ -1370,11 +1443,13 @@ address {
         .contact_text_bottom {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 0px;
+            padding-right: 17px;
 
             .contact_btns {
                 display: flex;
                 flex-direction: column;
+                padding-top: 9px;
             }
 
             span {
@@ -1401,7 +1476,7 @@ address {
             gap: 9px;
             border-radius: 20px;
             border: 1px solid $white;
-            padding: 15px 10px;
+            padding: 15px 26px;
 
             &:hover {
                 text-decoration: none;
@@ -1421,7 +1496,7 @@ address {
 
     .contact_img {
         img {
-            transform: translateX(14px)
+            transform: translate(22px, -85px);
         }
     }
 }
